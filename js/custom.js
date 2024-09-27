@@ -40,3 +40,22 @@
   })(window.jQuery);
 
 
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const productCards = document.querySelectorAll('.product-card');
+  
+    productCards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.style.backgroundColor = getAutumnColor();
+      });
+  
+      card.addEventListener('mouseleave', () => {
+        card.style.backgroundColor = '#FFFFFF';
+      });
+    });
+  
+    function getAutumnColor() {
+      const autumnColors = ['#FFA07A', '#FFD700', '#FF6347', '#DEB887', '#D2691E'];
+      return autumnColors[Math.floor(Math.random() * autumnColors.length)];
+    }
+  });
