@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/tattu2705/havest-box.git'
+                git branch: 'develop', url: 'https://github.com/tattu2705/havest-box.git'
             }
         }
     }
